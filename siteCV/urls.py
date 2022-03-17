@@ -20,5 +20,5 @@ from appCV.views import redirect_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('info/',include('appCV.urls')),
-    re_path(r'^$',redirect_view),
+    path('',redirect_view),
 ]
