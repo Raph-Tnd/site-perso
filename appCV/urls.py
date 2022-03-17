@@ -1,10 +1,10 @@
-from django.conf.urls import url
+from django.urls import path, include, re_path
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.home),
-    url(r'^features/$', views.features),
-    url(r'^features/CV/$',views.CV),
-    url(r'^features/CV/files/CV.pdf/$',views.DL),
-    url(r'^contact/$', views.contact),
+    re_path(r'^$', views.home),
+    re_path(r'^features/$', views.features),
+    re_path(r'^features/CV/$',views.CV),
+    re_path(r'^features/CV/files/CV.pdf/$',views.DL),
+    re_path(r'^contact/$', views.contact),
 ]
