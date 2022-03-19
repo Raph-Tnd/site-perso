@@ -3,12 +3,15 @@
 
 {% extends "html/home.html" %}
 {% load static %}
+   {% block navbar %}
+        <a class="nav-link" href="/info">Home</a>
+        <a class="nav-link active" href="/info/features">Features</a>
+        <a class="nav-link" href="/info/contact">Contact</a>
+        {% endblock %}
 {% block content %}
   <body>
     <div class="container">
-      <embed src="{% static "files/CV.pdf" %}" class="center-block" alt="PDF NOT SHOWING"
-        width="700"
-        height="800"/>
+      <embed src="{% static "files/CV.pdf" %}" class="center-block" alt="PDF NOT SHOWING" width="700" height="800" type="application/pdf"/>
     </div>
   </body>
 {% endblock %}

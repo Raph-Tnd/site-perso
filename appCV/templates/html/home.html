@@ -11,7 +11,8 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- Bootstrap core CSS -->
         {% load static %}
-        <link href="{% static "/templates/home.css" %}" rel="stylesheet"   type="text/css">
+
+        <link href="{% static "templates/home.css" %}" rel="stylesheet" type="text/css">
 
         <style>
             .bd-placeholder-img {
@@ -29,28 +30,27 @@
             }
             }
         </style>
-        <!-- Custom styles for this template -->
-        <link href="cover.css" rel="stylesheet">
     </head>
 
 
     <body class="text-center">
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div class="cover-container d-flex p-3 mx-auto flex-column">
             <header class="masthead mb-auto">
             <div class="inner">
                 <h3 class="masthead-brand">Raphaël Tenaud</h3>
-                {% block navbar %}
                 <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link active" href="/info">Home</a>
-                <a class="nav-link" href="/info/features">Features</a>
-                <a class="nav-link" href="/info/contact">Contact</a>
-                {% endblock %}
+                    {% block navbar %}
+                    <a class="nav-link active" href="/info">Home</a>
+                    <a class="nav-link" href="/info/features">Features</a>
+                    <a class="nav-link" href="/info/contact">Contact</a>
+                    {% endblock %}
                 </nav>
+
             </div>
             </header>
             {% block content %}
             <main role="main" class="inner cover">
-                <h1 class="cover-heading">Etudiant en Master 2 ALMA (Informatique) à Nantes.</h1>
+                <h1 class="cover-heading">Etudiant en Master 2 Informatique (ALMA) à Nantes.</h1>
                 <p class="lead">Vous trouverez ici mes travaux, ainsi que des informations sur moi: CV, contact...</p>
                 <p class="lead">
                 <a href="/info/features" class="btn btn-lg btn-secondary">Mes travaux</a>
